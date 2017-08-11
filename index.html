@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Open System</title>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    </head>
+    <body>
+                 <div class="header">
+         
+         
+         </div>
+        <div class="vertical-nav-holder">
+	<a href="#" class="vertical-nav-btn"><i class="fa fa-share-alt"></i></a>
+
+	<div class="vertical-nav">
+		<ul>
+			<li>
+				<a href="mailto:sadik.fattah@outlook.com"><i class="fa fa-envelope"></i></a>
+			</li>
+
+			<li>
+				<a href="skype:sadik.fattah?chat"><i class="fa fa-skype"></i></a>
+			</li>
+
+			<li>
+				<a href="https://www.google.com/maps/place/Guercif,+Morocco/@34.2345036,-3.3813007,13z/data=!3m1!4b1!4m5!3m4!1s0xd9d93cef4c0a409:0xc53894dc082cb544!8m2!3d34.2299391!4d-3.3489671" target="_blank"><i class="fa fa-map-marker"></i></a>
+			</li>
+
+			<li>
+				<a href="https://twitter.com/sadikfattah" target="_blank"><i class="fa fa-facebook"></i></a>
+			</li>
+
+			<li>
+				<a href="https://plus.google.com/+%D8%B5%D8%AF%D9%8A%D9%82%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%81%D8%AA%D8%A7%D8%AD12/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+			</li>
+		</ul>
+	</div><!-- /.vertical-nav -->
+</div><!-- /.vertical-nav-holder -->
+
+<div class="vertical-nav-overlay"></div><!-- /.vertical-nav-overlay -->
+        <script type="text/javascript">
+$(function(){
+    $('.vertical-nav-btn').click(function(){
+        $(this).toggleClass('active');
+
+        $('.vertical-nav').toggleClass('active');
+
+        $('.vertical-nav-overlay').toggleClass('active');
+
+        return false;
+    })
+
+    $(document).mouseup(function (e){
+        var container = $(".vertical-nav-btn");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0){
+            container.removeClass('active');
+            $('.vertical-nav-overlay').removeClass('active');
+            $('.vertical-nav').removeClass('active');
+        }
+    });
+});
+
+	</script>
+    </body>
+</html>
